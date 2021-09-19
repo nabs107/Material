@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -15,7 +15,11 @@ let package = Package(
             name: "Material",
             dependencies: ["Motion"],
             path: "Sources",
-            exclude: ["Frameworks"]
+            exclude: ["Frameworks"],
+            resources: [
+                .process("Assets.xcassets"),
+                .process("Font")
+            ]
         )
     ]
 )
